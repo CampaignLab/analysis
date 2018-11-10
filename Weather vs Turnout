@@ -1,1 +1,21 @@
-jj
+Weather vs Turnout
+
+We would like to compare weather in a ward vs the turnout at local elections in a ward.
+
+-- data extraction - turnout
+
+[2018 data](https://github.com/CampaignLab/data-pipeline/issues/13) - We have the turnout in some of the wards, but there isn't total coverage of ward turnout.
+
+[2014 data](https://github.com/CampaignLab/data-pipeline/issues/14) - There is no ward level turnout information for 2014.
+
+The lack of turnout info for 2014 means we have two choices:
+
+1. Look at the correlation between rain/weather and vote share. We think this is the best low-hanging fruit option.
+
+2. We could pick 100 or so random wards that have turnout data from 2018, and then manually research the turnout in those areas via council website PDFs etc. We can then compare those as normal.
+
+
+-- data extraction - weather
+
+We can use the DarkSkyLib API as outlined [here](https://github.com/CampaignLab/data-pipeline/issues/12). 
+Use the [ward shapefiles](http://parlvid.mysociety.org/os/bdline_gb-2018-10.zip) to determine lat long to then get the weather data of the wards.
